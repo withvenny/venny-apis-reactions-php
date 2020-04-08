@@ -12,7 +12,7 @@ time_started	TIMESTAMPTZ	NOT NULL DEFAULT NOW(),
 time_updated	TIMESTAMPTZ	NOT NULL DEFAULT NOW(),
 time_finished	TIMESTAMPTZ	NOT NULL DEFAULT NOW(),
 active	INT	NOT NULL DEFAULT 1
-);		
+);
 CREATE SEQUENCE acknowledgements_sequence;		
 ALTER SEQUENCE acknowledgements_sequence RESTART WITH 8301;		
 ALTER TABLE acknowledgements ALTER COLUMN ID SET DEFAULT nextval('acknowledgements_sequence');
