@@ -51,3 +51,16 @@ INSERT INTO comments (comment_ID,comment_attributes,comment_text,comment_thread,
  VALUES ('30-characters','{}','lorem ipsum','30 characters','30 characters','30 characters','30 characters','30 characters','30 characters');		
 SELECT * FROM comments;
 SELECT * FROM comments;
+
+SELECT comment_ID, comment_attributes, comment_text, comment_thread, comment_object, profile_ID, app_ID 
+	FROM comments 
+	WHERE comment_text LIKE '%funn%'
+	AND active = 1
+	AND app_id = 'app_thentrlco'
+	ORDER BY time_finished 
+	DESC OFFSET 0 LIMIT 20
+;
+
+
+
+
